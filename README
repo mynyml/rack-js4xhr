@@ -1,0 +1,24 @@
+===== Summary
+
+As it is highly common to want to return javascript from an ajax request, this
+rack middleware will set the application/javascript media type on xhr requests.
+
+If the 'X-Requested-With' header is present, 'application/javascript' will be
+prepended to the Accept header, available as env['HTTP_ACCEPT'].
+
+===== Install
+
+  sudo gem install mynyml-rack-js4xhr --source=http://gems.github.com/
+
+===== Usage
+
+  require 'rack'
+  require 'rack/js4xhr'
+
+  use Rack::Js4Xhr
+  run App.new
+
+===== Links
+
+source:: http://github.com/mynyml/rack-js4xhr
+rdocs::  http://docs.github.com/mynyml/rack-js4xhr
